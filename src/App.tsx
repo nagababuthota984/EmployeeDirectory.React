@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Container, Divider, Stack } from '@mui/material';
 import './App.css';
+import AppHeader from './components/appHeader';
+import ButtonFilters from './components/buttonFilters';
+import EmployeeList from './components/employeeList';
+import Search from './components/search';
+import SideNav from './components/sideNav';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className='App' maxWidth={false} sx={{height:'100%'}}>
+      <AppHeader />
+      <Divider />
+      <Stack direction="row" spacing={3}>
+        <SideNav />
+        <Container maxWidth={false}>
+          <ButtonFilters/>
+          <Search/>
+          <EmployeeList/>
+        </Container>
+      </Stack>
+    </Container>
   );
 }
 

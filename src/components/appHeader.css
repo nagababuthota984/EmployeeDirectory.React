@@ -1,0 +1,14 @@
+.saketa-logo{
+    width:13em;
+    height:4.5em;
+    background-color: transparent;
+}
+.sub-title{
+    margin:0;
+    margin-top:2px;
+}
+.person-dp{
+    border-radius: 100px;
+    height: 3rem;
+    width: 3rem;
+}
