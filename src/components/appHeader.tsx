@@ -1,7 +1,7 @@
 import { Grid, Stack, Typography } from "@mui/material"
 import './appHeader.css'
 
-export default function AppHeader() {
+function AppHeader() {
     return (
         <Grid container className="app-bar" mt={3} mb={1}>
             <Grid container item xs={6} rowSpacing={2} >
@@ -21,4 +21,5 @@ export default function AppHeader() {
         </Grid>
     );
 }
+export default AppHeader;
 

@@ -1,16 +1,18 @@
 import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material'
 import React from 'react'
+import { Employee } from '../models/employee';
 
-export default function EmpCard() {
+ function EmpCard(employee:Employee) {
   return (
-    <Card sx={{maxWidth:250,display:'flex',margin:'0'}}>
+    <Card sx={{maxWidth:250,maxHeight:90,cursor:"pointer",display:'flex',margin:"10px",backgroundColor:"#F0F0F0"}}>
       <Grid m={1}>
         <img src={require('../assets/images/angelina-bailey.png')} alt="Emp-dp"/>
       </Grid>
       <CardContent>
-        <Typography variant="subtitle1">Angelina bailey</Typography>
-        <Typography variant="body2" color="primary">Developer</Typography>
+        <Typography variant="subtitle1">{employee.PreferredName}</Typography>
+        <Typography variant="body2" color="primary">{employee.JobTitle}</Typography>
       </CardContent>
     </Card>
   )
 }
+export default EmpCard;

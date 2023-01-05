@@ -3,7 +3,7 @@ import './App.css';
 import AppHeader from './components/appHeader';
 import ButtonFilters from './components/buttonFilters';
 import EmployeeList from './components/employeeList';
-import Search from './components/search';
+import Search from './components/advancedFilters';
 import SideNav from './components/sideNav';
 
 function App() {
