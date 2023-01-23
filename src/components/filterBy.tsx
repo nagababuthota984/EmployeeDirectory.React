@@ -3,7 +3,7 @@ import React from 'react'
 
 function FilterBy() {
     return (
-        <FormControl fullWidth={false}>
+        <FormControl fullWidth={false} sx={{width:'200px',my:'auto',mx:'20px'}}>
             <InputLabel id="select-filter-by">Filter by</InputLabel>
             <Select size='small' value='FirstName' label='Filter by' labelId='select-filter-by'>
                 <MenuItem value='FirstName'>First Name</MenuItem>

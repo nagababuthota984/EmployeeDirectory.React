@@ -21,7 +21,7 @@ export default function EmployeeList() {
   const empList = employees.map((employee)=>
   <EmpCard {...employee}/>);
   return (
-    <Container disableGutters maxWidth={false} sx={{display:'flex', border: '1px solid grey', height: '40em', overflow: 'auto' }}>
+    <Container disableGutters maxWidth={false} sx={{display:'flex', border: '1px solid grey', height: '39em', overflow: 'auto' }}>
       {empList}
     </Container>
   )

@@ -1,0 +1,1 @@
+export const LOGIN_URL = "https://localhost.7013/api/Login"
