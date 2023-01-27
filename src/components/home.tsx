@@ -1,5 +1,4 @@
 import { Button, Container, Divider, Grid, Stack } from '@mui/material'
-import React from 'react'
 import AppHeader from './appHeader'
 import ButtonFilters from './buttonFilters'
 import EmployeeList from './employeeList'
@@ -17,7 +16,7 @@ function home() {
                 <Container maxWidth={false}>
                     <ButtonFilters />
                     <Grid container item sx={{ width: '100%',my:'10px'}}>
-                        <Grid container item xs={9}>
+                        <Grid container item xs={9} direction="row">
                             <Search />
                             <FilterBy />
                         </Grid>

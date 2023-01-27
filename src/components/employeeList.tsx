@@ -1,5 +1,4 @@
 import { Container } from '@mui/material'
-import React from 'react'
 import { Employee } from '../models/employee'
 import EmpCard from './empCard'
 

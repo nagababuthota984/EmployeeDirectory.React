@@ -1,5 +1,4 @@
-import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material'
-import React from 'react'
+import { Card, CardContent, Grid, Typography } from '@mui/material'
 import { Employee } from '../models/employee';
 
  function EmpCard(employee:Employee) {

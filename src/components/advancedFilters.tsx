@@ -1,5 +1,4 @@
 import { Button, Grid } from '@mui/material'
-import React from 'react'
 import FilterBy from './filterBy';
 import Search from './search';
 

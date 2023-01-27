@@ -1,4 +1,4 @@
-import { Grid, Stack, Typography } from "@mui/material"
+import { Grid, Typography } from "@mui/material"
 import './appHeader.css'
 
 function AppHeader() {

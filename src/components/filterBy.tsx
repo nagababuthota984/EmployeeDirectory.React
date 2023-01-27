@@ -1,5 +1,4 @@
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
-import React from 'react'
 
 function FilterBy() {
     return (
