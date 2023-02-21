@@ -1,12 +1,21 @@
 import { Button, Container, Divider, Grid, Stack } from '@mui/material'
-import AppHeader from './appHeader'
-import ButtonFilters from './buttonFilters'
-import EmployeeList from './employeeList'
-import FilterBy from './filterBy'
-import Search from './search'
-import SideNav from './sideNav'
+import { ChangeEvent, ChangeEventHandler } from 'react'
+import AppHeader from './AppHeader'
+import ButtonFilters from './ButtonFilters'
+import EmployeeList from './EmployeeList'
+import FilterBy from './FilterBy'
+import Search from './Search'
+import SideNav from './SideNav'
 
-function home() {
+
+
+
+
+function Home() {
+    let searchText :string = "";
+    const searchTextChanged = (event:any) =>{
+        searchText = event.target.value;
+    }
     return (
         <Container maxWidth={false} sx={{ height: '100%', width: '100%' }}>
             <AppHeader />
@@ -17,18 +26,18 @@ function home() {
                     <ButtonFilters />
                     <Grid container item sx={{ width: '100%',my:'10px'}}>
                         <Grid container item xs={9} direction="row">
-                            <Search />
+                            <Search textChanged={searchTextChanged}/>
                             <FilterBy />
                         </Grid>
                         <Grid item xs={3}>
                             <Button variant="contained" sx={{ float: 'right', textTransform: 'none', height: "40px", width: "170px",my:"10px" }} size='small' >Add Employee</Button>
                         </Grid>
                     </Grid>
-                    <EmployeeList />
+                    <EmployeeList searchFor={searchText}/>
                 </Container>
             </Stack>
         </Container>
     )
 }
 
-export default home
+export default Home

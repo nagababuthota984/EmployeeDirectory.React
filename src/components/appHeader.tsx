@@ -1,7 +1,9 @@
 import { Grid, Typography } from "@mui/material"
-import './appHeader.css'
+import './AppHeader.css'
 
 function AppHeader() {
+
+    const userName:string = JSON.parse(localStorage.getItem("authContext") as string).name;
     return (
         <Grid container className="app-bar" mt={3} mb={1}>
             <Grid container item xs={6} rowSpacing={2} >
@@ -12,9 +14,9 @@ function AppHeader() {
                 </Grid>
             </Grid>
             <Grid container item xs={6} justifyContent="right">
-                <img src={require('../assets/images/angelina-bailey.png')} alt="user-dp" className="person-dp" />
+                <img src={require('../assets/images/andrew-philips.png')} alt="user-dp" className="person-dp" />
                 <Grid item mx={1}>
-                    <Typography variant="subtitle1" color="primary">Angelina bailey</Typography>
+                    <Typography variant="subtitle1" color="primary">{userName}</Typography>
                     <Typography variant="body2">HR-Manager</Typography>
                 </Grid>
             </Grid>

@@ -1,6 +1,6 @@
 import { Button, Grid } from '@mui/material'
-import FilterBy from './filterBy';
-import Search from './search';
+import FilterBy from './FilterBy';
+import Search from './Search';
 
 function AdvancedFilters() {
     return (

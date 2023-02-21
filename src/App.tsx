@@ -1,15 +1,9 @@
-import { Container, Divider, Stack } from '@mui/material';
 import './App.css';
-import AppHeader from './components/appHeader';
-import ButtonFilters from './components/buttonFilters';
-import EmployeeList from './components/employeeList';
-import Search from './components/advancedFilters';
-import SideNav from './components/sideNav';
 import { Route, Routes } from 'react-router-dom';
-import Layout from './components/layout';
-import SignIn from './components/signIn';
-import Home from './components/home';
-import RequireAuth from './components/requireAuth';
+import Layout from './components/Layout';
+import SignIn from './components/SignIn';
+import Home from './components/Home';
+import RequireAuth from './components/RequireAuth';
 
 function App() {
   return (

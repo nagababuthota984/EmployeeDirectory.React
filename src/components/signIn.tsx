@@ -22,13 +22,17 @@ function SignIn() {
     const [passwd, setPasswd] = useState('');
     const [errMsg, setErrMsg] = useState('');
 
+    console.log("render");
+
+
     useEffect(() => {
         userRef.current.focus();
+        console.log("useEffect");
     }, [])
 
     useEffect(() => {
         setErrMsg('');
-    }, [user, passwd]);
+    }, [user, passwd]); 
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
@@ -54,11 +58,18 @@ function SignIn() {
         setUser('');
         setPasswd('');
         setAuth({ user, passwd });
-        navigate(from, { replace: true })
+        navigate(from, { replace: true });
     }
 
     const handleOAuthSubmit = async (e: any) => {
         instance.loginRedirect(loginRequest);
+        let account:any = await instance.getActiveAccount();
+        if(account?.username)
+        {
+            localStorage.setItem("authContext",JSON.stringify(account));
+            navigate(from, { replace: true });
+            //add id token to local storage
+        }
     }
 
     return (
