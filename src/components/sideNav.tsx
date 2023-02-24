@@ -3,24 +3,24 @@ import { useEffect, useState } from "react";
 
 export default function SideNav() {
     const [deptCounts,setDeptCounts] = useState({});
-    useEffect(() => {
-      departments();
-    }, [])
+    // useEffect(() => {
+    //   departments();
+    // }, [])
     
-    const departments = () =>{
-        axios({
-            method:"get",
-            url:'https://localhost:7013/api/Dept/getDeptCounts',
-            headers:{
-                'Authorization':`Bearer ${JSON.parse(localStorage.getItem("idToken") as string).idToken}`
-            }
-        })
-        .then((response):any => {
-            console.log(response);
-            setDeptCounts(response);
-        })
-        .catch(error=>console.error(`Error: ${error}`));
-    }
+    // const departments = () =>{
+    //     axios({
+    //         method:"get",
+    //         url:'https://localhost:7013/api/Dept/getDeptCounts',
+    //         headers:{
+    //             'Authorization':`Bearer ${JSON.parse(localStorage.getItem("idToken") as string).idToken}`
+    //         }
+    //     })
+    //     .then((response):any => {
+    //         console.log(response);
+    //         setDeptCounts(response);
+    //     })
+    //     .catch(error=>console.error(`Error: ${error}`));
+    // }
     return (
         <div>
             <div>
